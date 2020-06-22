@@ -8,5 +8,6 @@ RUN mkdir -p /mysql
 
 COPY setup.sh /mysql/setup.sh
 COPY privileges.sql /mysql/privileges.sql
+RUN chmod -R 755 /mysql
 
 
