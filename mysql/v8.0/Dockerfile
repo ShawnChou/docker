@@ -1,2 +1,13 @@
 FROM mysql:8.0
 MAINTAINER shawnchou1988@gmail.com
+
+#设置免密登录
+ENV MYSQL_ALLOW_EMPTY_PASSWORD yes
+
+COPY setup.sh /mysql/setup.sh
+COPY privileges.sql /mysql/privileges.sql
+
+#设置容器启动时执行的命令
+CMD ["sh", "/mysql/setup.sh"]
+
+
