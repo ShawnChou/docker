@@ -6,7 +6,7 @@ ENV MYSQL_ALLOW_EMPTY_PASSWORD yes
 
 RUN mkdir -p /mysql
 
-#COPY setup.sh /mysql/setup.sh
+COPY setup.sh /mysql/setup.sh
 COPY privileges.sql /mysql/privileges.sql
 
 
