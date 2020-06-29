@@ -12,6 +12,7 @@ RUN docker-php-ext-enable memcached
 RUN pecl install redis
 RUN docker-php-ext-enable redis
 #composer相关
+RUN apk add libzip-dev
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install pcntl
 RUN curl -sS http://getcomposer.org/installer | php
