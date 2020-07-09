@@ -11,6 +11,8 @@ RUN docker-php-ext-enable memcached
 #安装redis扩展
 RUN pecl install redis
 RUN docker-php-ext-enable redis
+RUN docker-php-ext-install gmp
+RUN docker-php-ext-install bcmath
 #composer相关
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install pcntl
