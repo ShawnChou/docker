@@ -3,7 +3,7 @@ MAINTAINER Shawn.Chou "shawnchou1988@gmail.com"
 RUN docker-php-source extract && docker-php-source delete
 RUN apt-get update
 RUN apt-get install -y vim net-tools procps libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libz-dev libmemcached-dev libgmp-dev
-RUN docker-php-ext-configure gd --with-gd --with-webp-dir --with-jpeg-dir --with-png-dir --with-zlib-dir --with-xpm-dir --with-freetype-dir --enable-gd-native-ttf
+RUN docker-php-ext-configure gd --with-gd --with-webp-dir --with-jpeg-dir --with-png-dir --with-zlib-dir --with-xpm-dir --with-freetype-dir
 RUN docker-php-ext-install -j$(nproc)  gd mbstring pdo pdo_mysql mysqli gmp bcmath zip pcntl
 #安装memcached扩展
 RUN pecl install memcached
