@@ -5,6 +5,7 @@ MAINTAINER shawnchou1988@gmail.com
 ENV MYSQL_ALLOW_EMPTY_PASSWORD yes
 
 RUN mkdir -p /mysql
+RUN mkdir -p /etc/mysql/myconf.d/
 
 COPY setup.sh /mysql/setup.sh
 COPY privileges.sql /mysql/privileges.sql
