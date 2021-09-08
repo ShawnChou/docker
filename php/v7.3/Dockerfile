@@ -4,8 +4,7 @@ RUN docker-php-source extract && docker-php-source delete
 RUN apt-get update
 
 RUN apk add libzip-dev ldb-dev libldap openldap-dev
-RUN apk add openldap-back-mdb
-RUN apk add --update --virtual .build-deps autoconf g++ make zlib-dev curl-dev libidn2-dev libevent-dev icu-dev libidn-dev openldap libxml2-dev
+RUN apk add openldap-back-mdb openldap
 
 RUN apt-get install -y vim net-tools procps libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libz-dev libmemcached-dev libgmp-dev libldap2-dev
 
