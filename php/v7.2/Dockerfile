@@ -1,4 +1,4 @@
-FROM php:7.2-fpm
+FROM php:7.3-fpm
 MAINTAINER Shawn.Chou "shawnchou1988@gmail.com"
 RUN docker-php-source extract && docker-php-source delete
 RUN apt-get update
