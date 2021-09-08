@@ -11,3 +11,8 @@ RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
     install-php-extensions bcmath bz2 calendar exif gd gettext gmp igbinary imagick memcached mongodb mysqli pcntl pdo_mysql pdo_pgsql pgsql redis shmop sockets swoole sysvmsg sysvsem sysvshm wddx xhprof xsl zip ldap
 
 RUN install-php-extensions @composer
+#创建用户
+RUN useradd -ms /bin/bash dev
+RUN usermod -aG root dev
+USER dev
+WORKDIR /workspace/htdocs/
