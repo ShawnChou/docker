@@ -1,5 +1,5 @@
 # Dockerfile for container1
-FROM ubuntu:22.04-slim
+FROM ubuntu:latest
 
 # 安装必要的包
 RUN apt-get update && apt-get install -y \

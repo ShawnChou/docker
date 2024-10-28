@@ -1,4 +1,4 @@
-FROM ubuntu:22.04-slim
+FROM ubuntu:latest
 
 # 安装 Docker CLI
 RUN apt-get update && apt-get install -y \
